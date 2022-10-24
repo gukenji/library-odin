@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 2% 2%;
+}
+
+h1 {
+  font-family: 'Reenie Beanie', cursive;
+  text-align: center;
+  font-size: 50px;
+}
+
+a {
+  color: blue;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.p-5 {
+  padding: 5px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px 10px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.gap-5 {
+  gap: 5px;
+}
+
+.w-235 {
+  width: 235px;
+}
+
+.hidden {
+  display: none;
+}
+
+#newBook {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  box-shadow: 2px 2px gray;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: orange;
+  border-radius: 5px;
+  gap: 3px;
+  color: white;
+  padding: 5px;
+  margin: 20px auto;
+}
+
+#newBook:hover {
+  color: black;
+  box-shadow: 2px 2px black;
+}
+
+#newBook > span {
+  font-size: 15px;
+}
+
+#closeForm {
+  position: relative;
+  top: -5px;
+  right: 0;
+  left: 94%;
+  cursor: pointer;
+}
+
+#closeForm:hover {
+  color: red;
+}
+
+#addBook,
+.deleteBook {
+  margin: 0 auto;
+  padding: 5px;
+  background: none;
+  background-color: orange;
+  box-shadow: 2px 2px gray;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+#addBook:hover,
+.deleteBook:hover {
+  background-color: orange;
+  color: black;
+  box-shadow: 2px 2px black;
+}
+
+.book {
+  background-color: black;
+  min-height: 200px;
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.79);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 5px;
+  position: relative;
+}
+
+.content {
+  color: white;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+}
+
+#showBooks {
+  display: flex;
+  gap: 10px;
+  row-gap: 50px;
+  margin-top: 20px;
+  word-break: break-all;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.deleteBook {
+  position: absolute;
+  bottom: -40px;
+  left: 75px;
+}
+
+.readToggle,
+.unreadToggle {
+  width: 30px;
+  height: 10px;
+  border:none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.readToggle {
+  transition-property: background-color;
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
+  transition-delay: 0.25s;
+  background-color: grey;
+}
+
+.unreadToggle {
+  transition-property: background-color;
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
+  transition-delay: 0.25s;
+  background-color: green;
+}
+
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: green;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px green;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
