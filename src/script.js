@@ -1,19 +1,16 @@
 let myLibrary = [];
 var count = -1;
 
-// Construtor do livro
-function Book(author, title, pages) {
-  this.author = author;
-  this.title = title;
-  this.pages = pages;
-  this.readed = false;
+class Book {
+  constructor(author, title, pages){
+    this.author = author;
+    this.title = title;
+    this.pages = pages;
+  }
+  read(){
+    this.readed == false ? this.readed = true : this.readed = false;
+  }
 }
-
-// Função "ler"
-Book.prototype.read = function () {
-  this.readed == false ? this.readed = true : this.readed = false;
-}
-
 
 // Adicionar novo livro 
 function addBookToLibrary(book) {
